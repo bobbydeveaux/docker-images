@@ -15,6 +15,7 @@ RUN mkdir -p /var/log/supervisor
 
 COPY ./conf/php-dev.ini /usr/local/etc/php/
 COPY ./conf/php-prod.ini /usr/local/etc/php/
+COPY ./conf/php-prod.ini /usr/local/etc/php/php.ini
 COPY ./conf/envars-development.conf /usr/local/etc/php-fpm.d
 COPY ./conf/supervisord.conf /etc
 WORKDIR /srv

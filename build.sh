@@ -1,8 +1,7 @@
 #!/bin/bash
 
-docker build ./nginx -t bobbydvo/ost_nginx:latest
-docker build ./php-fpm -t bobbydvo/ost_php-fpm:latest
+CONTAINER=$1
 
-docker push bobbydvo/ost_nginx:latest
-docker push bobbydvo/ost_php-fpm:latest
+docker build ./$CONTAINER -t bobbydvo/ost_$CONTAINER:latest
 
+#docker push bobbydvo/ost_$CONTAINER:latest
