@@ -2,14 +2,14 @@ version: "2"
 services:
   php-fpm:
     build: ./php-fpm
-    image: bobbydvo/ost_php-fpm:latest
+    image: bobbydvo/ukc_php-fpm:latest
     ports:
       - "9000:9000"
     environment:
       - APPLICATION_ENV=prod
   web:
     build: ./nginx
-    image: bobbydvo/ost_nginx:latest
+    image: bobbydvo/ukc_nginx:latest
     ports:
       - "80:80"
     environment:
