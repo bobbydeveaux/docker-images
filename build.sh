@@ -6,7 +6,7 @@ BUILD_NUMBER=$2
 
 if [[ $CONTAINER == 'all' ]];
 	then
-		for CONTAINER in php-fpm nginx dynamodb;
+		for CONTAINER in php-fpm nginx dynamodb consul;
 		do
 			docker build ./$CONTAINER -t bobbydvo/ukc_$CONTAINER:latest
 			docker tag bobbydvo/ukc_$CONTAINER:latest  bobbydvo/ukc_$CONTAINER:$VERSION.$BUILD_NUMBER
